@@ -11,7 +11,7 @@ def inicializar_driver():
 
     edge_options = Options()
     edge_options.add_argument('--ignore-certificate-errors')
-    edge_options.add_argument('--headless')  # Ejecutar en modo headless (sin interfaz gráfica)
+    #edge_options.add_argument('--headless')  # Ejecutar en modo headless (sin interfaz gráfica)
     edge_options.add_argument('--no-sandbox')
     edge_options.add_argument('--disable-dev-shm-usage')
     edge_options.use_chromium = True
