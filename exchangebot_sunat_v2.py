@@ -221,7 +221,7 @@ def determinar_mes(mes_str):
 def main():
 
     time.sleep(1)
-    txt_path = r"E:\Desktop\KPMG\ExchangeBot\SUNAT TC.txt"
+    txt_path = "SUNAT_TC.txt"
     nombre_carpeta_driver = 'edgedriver_win64'
     driver_path = nombre_carpeta_driver + "/msedgedriver.exe"
 
