@@ -7,7 +7,7 @@ from datetime import datetime
 import time
 import os
 
-def inicializar_driver(driver_path):
+def inicializar_driver():
 
     edge_options = Options()
     edge_options.add_argument('--ignore-certificate-errors')
@@ -15,7 +15,7 @@ def inicializar_driver(driver_path):
     edge_options.add_argument('--no-sandbox')
     edge_options.add_argument('--disable-dev-shm-usage')
     edge_options.use_chromium = True
-    service = EdgeService(driver_path)
+    service = EdgeService(EdgeChromiumDriverManager().install())
     driver = webdriver.Edge(service = service, options = edge_options)
 
     return driver
@@ -226,7 +226,7 @@ def main():
     driver_path = nombre_carpeta_driver + "/msedgedriver.exe"
 
     try:
-        driver = inicializar_driver(driver_path)
+        driver = inicializar_driver()
         driver.get("https://www.google.com")
 
         if driver:
